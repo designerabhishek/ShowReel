@@ -14,13 +14,17 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     </head>
-    <body>
-        <div class="container grid ">
-            <h1 class="text-8xl">Get, Set, Scroll</h1>
+    <body class="bg-white dark:bg-zinc-900">
+        <div class="container mx-auto grid h-dvh">
+            <lottie-player id="introLottie" src="https://raw.githubusercontent.com/designerabhishek/ShowReel/main/assets/Welcome-Text.json" background="transparent"  speed="0.5"  style="width: 100%; height: auto;" loop autoplay></lottie-player>
 
         </div>
-        <div id="animated" class="container">
-            <lottie-player id="firstLottie" src="https://raw.githubusercontent.com/designerabhishek/ShowReel/main/assets/Happy-Faces-%E2%80%93-Landing-page.json" background="transparent"  speed="0.5"  style="width: 100%; height: auto;" loop autoplay></lottie-player>
+        <div id="animated" class="container mx-auto grid ">
+            <lottie-player id="firstLottie" src="https://raw.githubusercontent.com/designerabhishek/ShowReel/main/assets/Happy-Faces-%E2%80%93-Landing-page.json" background="transparent"  speed="1"  style="width: 100%; height: auto;" loop autoplay></lottie-player>
+
+        </div>
+        <div class="container mx-auto grid h-dvh justify-center content-center">
+            <h2 class="font-mono text-slate-900 dark:text-slate-50 max-w-md text-balance text-center text-3xl">Scroll animation achieved through lottie interactivity</h2>
 
         </div>
         <!--[if lt IE 7]>
@@ -38,7 +42,7 @@
                 {
                   visibility: [0,1.0],
                   type: 'seek',
-                  frames: [0, 550],
+                  frames: [-29, 320],
                 },
               ]
             });
