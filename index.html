@@ -11,10 +11,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
     </head>
     <body>
-        <lottie-player id="firstLottie" src="https://raw.githubusercontent.com/designerabhishek/ShowReel/main/Showreel-Grid-Mobile-003.json" background="transparent"  speed="0.85"  style="width: 100vw; height: auto;" loop autoplay></lottie-player>
+        <div class="container grid ">
+            <h1 class="text-8xl">Get, Set, Scroll</h1>
+
+        </div>
+        <div id="animated" class="container">
+            <lottie-player id="firstLottie" src="https://raw.githubusercontent.com/designerabhishek/ShowReel/main/assets/Happy-Faces-%E2%80%93-Landing-page.json" background="transparent"  speed="0.5"  style="width: 100%; height: auto;" loop autoplay></lottie-player>
+
+        </div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -25,11 +33,12 @@
             LottieInteractivity.create({
               player: '#firstLottie',
               mode: 'scroll',
+              container: '#animated',
               actions: [
                 {
-                  visibility: [0,1],
+                  visibility: [0,1.0],
                   type: 'seek',
-                  frames: [0, 300],
+                  frames: [0, 550],
                 },
               ]
             });
